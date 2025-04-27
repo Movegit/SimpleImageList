@@ -15,7 +15,7 @@ final class DetailViewModelTest: XCTestCase {
 
     override func setUpWithError() throws {
         try super.setUpWithError()
-        viewModel = DetailViewModel()
+        viewModel = DetailViewModel(service: PicSumImageService())
     }
 
     override func tearDownWithError() throws {

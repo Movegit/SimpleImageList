@@ -9,10 +9,9 @@ import Foundation
 import UIKit
 
 class DetailImageViewController: UIViewController {
-
-    private lazy var viewModel: DetailViewListType = DetailViewModel()
+    private let viewModel: DetailViewListType
     private lazy var headerView = DetailHeaderView(title: "detailImage")
-    private var imageId: String = ""
+    private let imageId: String
 
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
@@ -37,9 +36,10 @@ class DetailImageViewController: UIViewController {
         return label
     }()
 
-    init(imageId: String) {
-        super.init(nibName: nil, bundle: nil)
+    init(viewModel: DetailViewListType, imageId: String) {
         self.imageId = imageId
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
     }
 
     required init?(coder: NSCoder) {

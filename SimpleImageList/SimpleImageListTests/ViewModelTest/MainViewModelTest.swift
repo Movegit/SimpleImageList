@@ -15,7 +15,7 @@ final class MainViewModelTest: XCTestCase {
 
     override func setUpWithError() throws {
         try super.setUpWithError()
-        viewModel = MainViewModel()
+        viewModel = MainViewModel(picsumService: PicSumImageService(), defaultPageSize: 30)
     }
 
     override func tearDownWithError() throws {

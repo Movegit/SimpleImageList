@@ -14,8 +14,7 @@ enum MyImageListSection: Int {
 }
 
 class MainViewController: UIViewController {
-
-    private lazy var viewModel: MainViewListType = MainViewModel()
+    private let viewModel: MainViewListType
     private lazy var headerView = MainHeaderView(title: "Pic List")
     private lazy var collectionView: UICollectionView = {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: self.createLayout())
@@ -35,6 +34,15 @@ class MainViewController: UIViewController {
     }()
 
     private let sectionList: [MyImageListSection] = [.mainImageList, .emptyImageList]
+
+    public init(viewModel: MainViewListType) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     // MARK: - VC lifecycle methods
     override func viewDidLoad() {
@@ -128,7 +136,8 @@ extension MainViewController: UICollectionViewDelegate {
         switch sectionType {
         case .mainImageList:
             let item = viewModel.picList[indexPath.row]
-            let vc = DetailImageViewController(imageId: item.id)
+            let viewModel: DetailViewListType = DetailViewModel(service: PicSumImageService())
+            let vc = DetailImageViewController(viewModel: viewModel, imageId: item.id)
             self.navigationController?.pushViewController(vc, animated: true)
         case .emptyImageList:
             break

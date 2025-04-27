@@ -58,7 +58,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 extension SceneDelegate {
     private func makeRooViewController() -> UIViewController {
-        let vc = MainViewController()
+
+        let mainViewModel: MainViewListType = MainViewModel(picsumService: PicSumImageService(), defaultPageSize: 30)
+        let vc = MainViewController(viewModel: mainViewModel)
 
         let navigationController = UINavigationController(rootViewController: vc)
         navigationController.isNavigationBarHidden = true
