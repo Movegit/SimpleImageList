@@ -17,7 +17,7 @@ class DetailViewModelNimbleSpec: QuickSpec {
         let timeout: Int = ProcessInfo.processInfo.environment["SIMULATOR_DEVICE_NAME"] != nil ? 10 : 5
 
         beforeEach {
-            viewModel = DetailViewModel()
+            viewModel = DetailViewModel(service: PicSumImageService())
         }
 
         afterEach {

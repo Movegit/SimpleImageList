@@ -17,7 +17,7 @@ class MainViewModelNimbleTest: QuickSpec {
         let timeout: Int = ProcessInfo.processInfo.environment["SIMULATOR_DEVICE_NAME"] != nil ? 10 : 5
 
         beforeEach {
-            viewModel = MainViewModel()
+            viewModel = MainViewModel(picsumService: PicSumImageService(), defaultPageSize: 30)
         }
 
         afterEach {
