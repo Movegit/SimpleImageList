@@ -10,14 +10,14 @@ import Foundation
 protocol DetailViewListType {
     func loadDetail(imageId: String) async
     func getContentData() -> String
-    var detailModel: PicSumItem { get set }
+    var detailModel: PicSumItem { get }
 }
 
 class DetailViewModel: DetailViewListType {
-    let service: PicSumImageServiceProtocol
-    var detailModel: PicSumItem = PicSumItem()
+    private let service: PicSumImageServiceProtocol
+    private(set) var detailModel: PicSumItem = PicSumItem()
 
-    init(service: PicSumImageServiceProtocol = PicSumImageService()) {
+    init(service: PicSumImageServiceProtocol) {
         self.service = service
     }
 

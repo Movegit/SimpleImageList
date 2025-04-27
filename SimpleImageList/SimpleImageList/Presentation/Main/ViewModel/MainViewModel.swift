@@ -10,20 +10,21 @@ import UIKit
 
 protocol MainViewListType {
     func loadData(initialize: Bool) async
-    var picList: [PicSumItem] { get set }
+    var picList: [PicSumItem] { get }
     var isLoadingData: Bool { get }
     var hasNext: Bool { get }
 }
 
 class MainViewModel: MainViewListType {
-    let picsumService: PicSumImageServiceProtocol
-    var picList: [PicSumItem] = []
-    var currentPage: Int = 1
-    var isLoadingData: Bool = false
-    var hasNext: Bool = true
-    private var pageSize: Int = 30
+    private let picsumService: PicSumImageServiceProtocol
+    private let pageSize: Int
 
-    init(picsumService: PicSumImageServiceProtocol = PicSumImageService(), defaultPageSize: Int = 30) {
+    private(set) var picList: [PicSumItem] = []
+    private(set) var currentPage: Int = 1
+    private(set) var isLoadingData: Bool = false
+    private(set) var hasNext: Bool = true
+
+    init(picsumService: PicSumImageServiceProtocol, defaultPageSize: Int) {
         self.picsumService = picsumService
         self.pageSize = defaultPageSize
     }
