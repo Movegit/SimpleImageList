@@ -13,23 +13,6 @@
 		E9B369F82DA0E3C000129AB5 /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = E9B369F72DA0E3C000129AB5 /* Quick */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		E9773B0B2D98D2FA00182E98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E9773AEC2D98D2F500182E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E9773AF32D98D2F500182E98;
-			remoteInfo = SimpleImageList;
-		};
-		E9773B152D98D2FA00182E98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E9773AEC2D98D2F500182E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E9773AF32D98D2F500182E98;
-			remoteInfo = SimpleImageList;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		E9773AF42D98D2F500182E98 /* SimpleImageList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleImageList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9773B0A2D98D2FA00182E98 /* SimpleImageListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleImageListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,7 +113,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				E9773B5D2D98DB3400182E98 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				E9773AF62D98D2F500182E98 /* SimpleImageList */,
@@ -155,7 +137,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				E9773B0C2D98D2FA00182E98 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				E9773B0D2D98D2FA00182E98 /* SimpleImageListTests */,
@@ -180,7 +161,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				E9773B162D98D2FA00182E98 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				E9773B172D98D2FA00182E98 /* SimpleImageListUITests */,
@@ -290,23 +270,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		E9773B0C2D98D2FA00182E98 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = E9773AF32D98D2F500182E98 /* SimpleImageList */;
-			targetProxy = E9773B0B2D98D2FA00182E98 /* PBXContainerItemProxy */;
-		};
-		E9773B162D98D2FA00182E98 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = E9773AF32D98D2F500182E98 /* SimpleImageList */;
-			targetProxy = E9773B152D98D2FA00182E98 /* PBXContainerItemProxy */;
-		};
-		E9773B5D2D98DB3400182E98 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			productRef = E9773B5C2D98DB3400182E98 /* SwiftLintBuildToolPlugin */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		E9773B1E2D98D2FA00182E98 /* Debug */ = {
@@ -654,11 +617,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = E9773B582D98DB0300182E98 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
-		};
-		E9773B5C2D98DB3400182E98 /* SwiftLintBuildToolPlugin */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = E9773B5B2D98DB2700182E98 /* XCRemoteSwiftPackageReference "SwiftLint" */;
-			productName = "plugin:SwiftLintBuildToolPlugin";
 		};
 		E9B369F42DA0E3A100129AB5 /* Nimble */ = {
 			isa = XCSwiftPackageProductDependency;
