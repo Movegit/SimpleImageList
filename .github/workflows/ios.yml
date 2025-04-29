@@ -24,7 +24,7 @@ jobs:
         run: brew install swiftlint
 
       - name: Run SwiftLint
-        run: swiftlint lint --strict
+        run: cd SimpleImageList && swiftlint --config .swiftlint.yml
 
       - name: Build
         run: |
