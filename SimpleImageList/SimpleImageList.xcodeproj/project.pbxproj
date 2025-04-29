@@ -671,6 +671,27 @@
 			productName = Quick;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E9773B5E2D98DB3400182E98 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ -f \"${SRCROOT}/.swiftlint.yml\" ]]; then\n  if which swiftlint >/dev/null; then\n    swiftlint --config \"${SRCROOT}/.swiftlint.yml\"\n  else\n    echo \"warning: SwiftLint not installed\"\n  fi\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase */
 	};
 	rootObject = E9773AEC2D98D2F500182E98 /* Project object */;
 }
