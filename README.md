@@ -66,12 +66,19 @@ open SimpleImageList.xcodeproj
 - **Quick**: BDD 스타일의 테스트 구조를 제공하여 가독성 높은 테스트 코드 작성
 - **Nimble**: 직관적인 매처(matcher)를 사용하여 테스트 결과 검증
 
-테스트를 실행하려면 Xcode의 테스트 네비게이터를 사용하거나 다음 명령을 실행하세요:
-
+### Testing
+Run tests using:
 ```bash
-xcodebuild test -project SimpleImageList.xcodeproj -scheme SimpleImageList -destination 'platform=iOS Simulator,name=iPhone 13'
+xcodebuild test -project SimpleImageList/SimpleImageList.xcodeproj -scheme SimpleImageList -destination "platform=iOS Simulator,name=iPhone 15 Pro"
 ```
 
+## CI/CD
+This project uses GitHub Actions for continuous integration. The following checks are performed on each PR and push to main:
+- SwiftLint code style check
+- Build validation
+- Unit tests
+- UI tests
+  
 ## 코드 스타일
 
 이 프로젝트는 SwiftLint를 사용하여 코드 스타일과 규칙을 검사합니다. 설정은 `.swiftlint.yml` 파일에 정의되어 있습니다.
