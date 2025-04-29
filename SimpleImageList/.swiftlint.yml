@@ -1,5 +1,5 @@
 included:
-  - Sources
+  - SimpleImageList
 excluded:
   - Pods
 
@@ -10,6 +10,7 @@ disabled_rules:
   - type_body_length
   - trailing_whitespace
   - function_body_length
+  - cyclomatic_complexity
 
 opt_in_rules:
   - empty_count
@@ -24,8 +25,4 @@ file_length:
   warning: 600
   error: 1200
 
-todo:
-  severity: warning
-  included: ".*.swift"
-  match_kinds:
-    - comment
+todo: warning
