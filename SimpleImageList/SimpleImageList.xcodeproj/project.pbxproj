@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E91415E42DC0AA0D00432BBD /* SwiftLintBuildToolPlugin in Frameworks */ = {isa = PBXBuildFile; productRef = E9773B5C2D98DB3400182E98 /* SwiftLintBuildToolPlugin */; };
 		E9773B572D98DA4800182E98 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = E9773B562D98DA4800182E98 /* SnapKit */; };
 		E9773B5A2D98DB0300182E98 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = E9773B592D98DB0300182E98 /* Kingfisher */; };
 		E9B369F52DA0E3A100129AB5 /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = E9B369F42DA0E3A100129AB5 /* Nimble */; };
@@ -72,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E91415E42DC0AA0D00432BBD /* SwiftLintBuildToolPlugin in Frameworks */,
 				E9773B5A2D98DB0300182E98 /* Kingfisher in Frameworks */,
 				E9773B572D98DA4800182E98 /* SnapKit in Frameworks */,
 			);
@@ -139,6 +141,7 @@
 			packageProductDependencies = (
 				E9773B562D98DA4800182E98 /* SnapKit */,
 				E9773B592D98DB0300182E98 /* Kingfisher */,
+				E9773B5C2D98DB3400182E98 /* SwiftLintBuildToolPlugin */,
 			);
 			productName = SimpleImageList;
 			productReference = E9773AF42D98D2F500182E98 /* SimpleImageList.app */;
@@ -199,6 +202,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
+				BuildSystemPluginInspectionEnabled = YES;
 				LastSwiftUpdateCheck = 1620;
 				LastUpgradeCheck = 1620;
 				TargetAttributes = {
