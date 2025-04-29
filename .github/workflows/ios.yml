@@ -18,20 +18,20 @@ jobs:
       - name: Set up Xcode
         uses: maxim-lobanov/setup-xcode@v1
         with:
-          xcode-version: latest-stable
+          xcode-version: 'latest-stable'
 
       - name: Install SwiftLint
         run: brew install swiftlint
 
       - name: Run SwiftLint
-        run: swiftlint lint --strict
+        run: cd SimpleImageList && swiftlint --config "${GITHUB_WORKSPACE}/SimpleImageList/.swiftlint.yml"
 
       - name: Build
         run: |
           xcodebuild clean build \
             -project SimpleImageList/SimpleImageList.xcodeproj \
             -scheme SimpleImageList \
-            -destination "platform=iOS Simulator,name=iPhone 16 Pro,OS=18.3.1" \
+            -destination "platform=iOS Simulator,name=iPhone 15,OS=17.2" \
             CODE_SIGN_IDENTITY="" \
             CODE_SIGNING_REQUIRED=NO \
             CODE_SIGNING_ALLOWED=NO
@@ -41,7 +41,7 @@ jobs:
           xcodebuild test \
             -project SimpleImageList/SimpleImageList.xcodeproj \
             -scheme SimpleImageList \
-            -destination "platform=iOS Simulator,name=iPhone 16 Pro,OS=18.3.1" \
+            -destination "platform=iOS Simulator,name=iPhone 15,OS=17.2" \
             -only-testing:SimpleImageListTests \
             CODE_SIGN_IDENTITY="" \
             CODE_SIGNING_REQUIRED=NO \
